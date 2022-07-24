@@ -1,0 +1,176 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Assets/backgrounds/Anya-Spy-X-Family-Wallpapers.jpg" type="Texture" id=1]
+[ext_resource path="res://Screens/ResultsScreen.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Assets/fonts/Open 24 Display St.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 48
+font_data = SubResource( 1 )
+
+[sub_resource type="Theme" id=3]
+default_font = SubResource( 2 )
+
+[sub_resource type="DynamicFontData" id=4]
+font_path = "res://Assets/fonts/Open 24 Display St.ttf"
+
+[sub_resource type="DynamicFont" id=5]
+size = 32
+font_data = SubResource( 4 )
+
+[sub_resource type="Theme" id=6]
+default_font = SubResource( 5 )
+
+[node name="ResultsScreen" type="Node2D"]
+position = Vector2( 99, -48 )
+scale = Vector2( 0.707007, 0.743294 )
+script = ExtResource( 2 )
+
+[node name="Anya-Spy-X-Family-Wallpapers" type="Sprite" parent="."]
+position = Vector2( 533, 342 )
+texture = ExtResource( 1 )
+
+[node name="Control" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+margin_left = -52.3333
+margin_top = 129.155
+margin_right = -12.3333
+margin_bottom = 169.155
+rect_scale = Vector2( 19.4983, 16.9156 )
+color = Color( 0.427451, 0.427451, 0.427451, 0.788235 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MissedCount" type="Label" parent="Control"]
+margin_left = 199.432
+margin_top = 496.439
+margin_right = 356.432
+margin_bottom = 553.439
+theme = SubResource( 3 )
+text = "Missed: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PerfectCount" type="Label" parent="Control"]
+margin_left = 429.982
+margin_top = 390.155
+margin_right = 604.982
+margin_bottom = 447.155
+theme = SubResource( 3 )
+text = "Perfect: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GreatCount" type="Label" parent="Control"]
+margin_left = 200.847
+margin_top = 386.119
+margin_right = 333.847
+margin_bottom = 443.119
+theme = SubResource( 3 )
+text = "Great: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LateCount" type="Label" parent="Control"]
+margin_left = -12.7297
+margin_top = 491.057
+margin_right = 120.27
+margin_bottom = 548.057
+theme = SubResource( 3 )
+text = "Late:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EarlyCount" type="Label" parent="Control"]
+margin_left = -8.48647
+margin_top = 387.465
+margin_right = 124.514
+margin_bottom = 444.465
+theme = SubResource( 3 )
+text = "Early: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score" type="Label" parent="Control"]
+margin_left = -8.48648
+margin_top = 279.836
+margin_right = 124.514
+margin_bottom = 336.836
+theme = SubResource( 3 )
+text = "Score: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Song" type="Label" parent="Control"]
+margin_left = -2.82883
+margin_top = 188.351
+margin_right = 109.171
+margin_bottom = 245.351
+theme = SubResource( 3 )
+text = "Song: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rank" type="Label" parent="Control"]
+margin_left = 415.838
+margin_top = 185.66
+margin_right = 548.838
+margin_bottom = 302.66
+theme = SubResource( 3 )
+text = "Rank
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Accuracy" type="Label" parent="Control"]
+margin_left = -1.41441
+margin_top = 582.542
+margin_right = 194.586
+margin_bottom = 639.542
+theme = SubResource( 3 )
+text = "Accuracy: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MainMenuButton" type="Button" parent="Control"]
+margin_left = 253.18
+margin_top = 688.826
+margin_right = 451.18
+margin_bottom = 733.826
+theme = SubResource( 6 )
+text = "Main Menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SongSelectionButton" type="Button" parent="Control"]
+margin_left = 22.6306
+margin_top = 688.826
+margin_right = 48.6306
+margin_bottom = 708.826
+theme = SubResource( 6 )
+text = "Song Selection"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Control/MainMenuButton" to="." method="_on_MainMenuButton_pressed"]
+[connection signal="pressed" from="Control/SongSelectionButton" to="." method="_on_SongSelectionButton_pressed"]

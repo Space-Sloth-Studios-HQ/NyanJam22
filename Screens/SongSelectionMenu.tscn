@@ -1,0 +1,98 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Screens/SongSelectionMenu.gd" type="Script" id=1]
+[ext_resource path="res://Assets/backgrounds/edm_crowd_background.png" type="Texture" id=2]
+
+[sub_resource type="DynamicFontData" id=4]
+font_path = "res://Assets/fonts/Open 24 Display St.ttf"
+
+[sub_resource type="DynamicFont" id=5]
+size = 32
+font_data = SubResource( 4 )
+
+[sub_resource type="Theme" id=6]
+default_font = SubResource( 5 )
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Assets/fonts/3X5_____.TTF"
+
+[sub_resource type="DynamicFont" id=2]
+size = 64
+font_data = SubResource( 1 )
+
+[sub_resource type="Theme" id=3]
+default_font = SubResource( 2 )
+
+[node name="SongSelectionMenu" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="EdmCrowdBackground" type="Sprite" parent="."]
+position = Vector2( 584, 303 )
+scale = Vector2( 0.655718, 0.646417 )
+texture = ExtResource( 2 )
+
+[node name="Control" type="Control" parent="."]
+margin_left = 57.0
+margin_top = 47.0
+margin_right = 57.0
+margin_bottom = 47.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MainMenuButton" type="Button" parent="Control"]
+margin_left = 431.0
+margin_top = 462.0
+margin_right = 915.0
+margin_bottom = 507.0
+theme = SubResource( 6 )
+text = "main menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="GridContainer" parent="Control"]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Control/CenterContainer"]
+margin_right = 484.0
+color = Color( 0.32549, 0.32549, 0.32549, 0.482353 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control/CenterContainer"]
+margin_top = 4.0
+margin_right = 484.0
+margin_bottom = 71.0
+theme = SubResource( 3 )
+text = "Choose Your Jam"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UsseewaDiceButton" type="Button" parent="Control/CenterContainer"]
+margin_top = 75.0
+margin_right = 484.0
+margin_bottom = 120.0
+theme = SubResource( 6 )
+text = "Ado - Usseewa"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UsseewaNoDiceButton" type="Button" parent="Control/CenterContainer"]
+margin_top = 124.0
+margin_right = 484.0
+margin_bottom = 169.0
+theme = SubResource( 6 )
+text = "Ado - Usseewa (No Dice Version)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Control/MainMenuButton" to="." method="_on_MainMenuButton_pressed"]
+[connection signal="pressed" from="Control/CenterContainer/UsseewaDiceButton" to="." method="_on_UsseewaDiceButton_pressed"]
+[connection signal="pressed" from="Control/CenterContainer/UsseewaNoDiceButton" to="." method="_on_UsseewaNoDiceButton_pressed"]
