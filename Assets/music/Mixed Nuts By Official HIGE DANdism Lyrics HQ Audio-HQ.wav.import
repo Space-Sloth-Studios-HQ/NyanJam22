@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Mixed Nuts By Official HIGE DANdism Lyrics HQ Audio-HQ.wav-7613cc308cb9558d7ca99252fc575078.sample"
+
+[deps]
+
+source_file="res://Assets/music/Mixed Nuts By Official HIGE DANdism Lyrics HQ Audio-HQ.wav"
+dest_files=[ "res://.import/Mixed Nuts By Official HIGE DANdism Lyrics HQ Audio-HQ.wav-7613cc308cb9558d7ca99252fc575078.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
